@@ -6,10 +6,8 @@ import retrofit2.http.Path
 
 interface NewsApi {
 
-//    @GET("category/health/in.json")
-//    suspend fun getNews(): Article
     @GET("category/{category}/{country}.json")
     suspend fun getNews(
-        @Path("country") country: String = "in", @Path("category") category: String = "business"
+        @Path("country") country: String = "us", @Path("category") category: String = "business"
     ): Article
 }
