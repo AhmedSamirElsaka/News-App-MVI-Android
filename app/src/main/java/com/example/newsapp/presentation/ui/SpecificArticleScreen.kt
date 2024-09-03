@@ -1,6 +1,7 @@
 package com.example.newsapp.presentation.ui
 
 import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -13,6 +14,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -108,6 +110,11 @@ fun SpecificArticleScreen(
                         color = Color.Black
                     )
                 }
+
+                Spacer(modifier = Modifier.height(64.dp))
+
+                OpenInBrowserButton(article.url)
+
             }
         }
     }
@@ -133,3 +140,19 @@ fun ShareArticleIcon(articleTitle: String, articleUrl: String) {
         )
     }
 }
+
+@Composable
+fun OpenInBrowserButton(articleUrl: String) {
+    val context = LocalContext.current
+
+    Button(
+        onClick = {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(articleUrl))
+            context.startActivity(intent)
+        },
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Text(text = "Read Full Article")
+    }
+}
+
