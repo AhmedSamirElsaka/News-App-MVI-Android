@@ -30,4 +30,4 @@ A Jetpack Compose-based Android news application that allows users to browse and
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/NewsApp.git
+   git clone https://github.com/AhmedSamirElsaka/News-App-MVI-Android
