@@ -49,4 +49,3 @@ A Jetpack Compose-based Android news application that allows users to browse and
 3. **Article Details**: Tap on any article to view its details.
 4. **Share or Read Full Article**: Use the buttons in the detail screen to either share the article or read it in a browser.
 
-## Project Structure
