@@ -1,6 +1,9 @@
 [versions]
+activityComposeVersion = "1.8.1"
 agp = "8.5.0"
+composeBomVersion = "2023.03.00"
 converterGson = "2.9.0"
+coreKtxVersion = "1.12.0"
 googleHiltCompilerVersion = "2.52"
 googleHiltAndroidVersion = "2.52"
 gradle = "8.1.4"
@@ -28,7 +31,10 @@ retrofit = "2.9.0"
 roomKtx = "2.6.1"
 
 [libraries]
+androidx-compose-bom-v20230300 = { module = "androidx.compose:compose-bom", version.ref = "composeBomVersion" }
+androidx-activity-compose-v181 = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-ktx-v1120 = { module = "androidx.core:core-ktx", version.ref = "coreKtxVersion" }
 androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltCompiler" }
 androidx-hilt-navigation-compose-v110 = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationComposeVersion" }
 androidx-hilt-compiler-v110 = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltCompilerVersion" }
@@ -63,6 +69,8 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 hilt = { group = 'com.google.dagger', name = 'hilt-android', version = '2.51.1'}
 androidx-hilt = { group = 'androidx.hilt', name = 'hilt-navigation-compose', version = '1.2.0'}
 hilt-android-compiler = { group = 'com.google.dagger', name = 'hilt-compiler', version = '2.51.1' }
+ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+ui = { module = "androidx.compose.ui:ui" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
